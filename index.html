@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Project Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <ul>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#todo">To-Do App</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<section id="portfolio">
+  <h1>Hi, I'm Bhuma Poojitha</h1>
+  <p>Frontend Developer | JavaScript Enthusiast | UI/UX Learner</p>
+  <h2>About Me</h2>
+  <p>I build modern, responsive web applications using HTML, CSS, and JavaScript.</p>
+  <h2>Projects</h2>
+  <ul>
+    <li>To-Do App with Local Storage</li>
+    <li>Product Listing Page</li>
+    <li>Responsive Portfolio Website</li>
+  </ul>
+</section>
+<section id="todo">
+  <h2>To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Enter a task" />
+  <button onclick="addTask()">Add</button>
+  <ul id="taskList"></ul>
+</section>
+<section id="products">
+  <h2>Product Listing</h2>
+  <div class="form-container">
+    <label>Category:</label>
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="All">All</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Clothing">Clothing</option>
+    </select>
+    <label>Sort By:</label>
+    <select id="sortOption" onchange="filterProducts()">
+      <option value="default">Default</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="price-desc">Price: High to Low</option>
+    </select>
+  </div>
+  <div id="productList"></div>
+</section>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form onsubmit="event.preventDefault(); alert('Message Sent!');">
+    <input type="text" placeholder="Your Name" required><br>
+    <input type="email" placeholder="Your Email" required><br>
+    <textarea placeholder="Your Message" rows="4" required></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
